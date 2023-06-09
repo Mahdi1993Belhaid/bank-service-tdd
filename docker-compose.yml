@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+
+
+
+
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=bankservicel
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=admin1
+    healthcheck:
+      test: "pg_isready -U postgres"
+
