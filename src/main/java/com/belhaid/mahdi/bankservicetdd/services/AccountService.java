@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 public class AccountService {
 
     private final AccountRepository accountRepository;
-    @Value(value = "limit.max")
+    @Value(value = "${limit.max}")
     private BigDecimal max;
 
     public AccountService(AccountRepository accountRepository) {
