@@ -18,7 +18,7 @@ public class AccountController {
 
 
 
-    @PostMapping("/{accountId}/debit")
+    @PostMapping("/debit")
     public ResponseEntity<Void> debitAccount(@RequestBody RequestWithdrawalDTO request) {
         accountService.debitAccount(request);
         return ResponseEntity.ok().build();
